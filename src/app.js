@@ -14,7 +14,8 @@ OrderProvider.prototype.formatters = {
     updateZeroVal: require('./formatters/update-zero-val'),
     removeEmptyAfterbraketLine: require('./formatters/remove-empty-afterbraket-line'),
     trimLines: require('./formatters/trim-lines'),
-    addLineAfterBraket: require('./formatters/add-line-after-braket')
+    addLineAfterBraket: require('./formatters/add-line-after-braket'),
+    removeLeadingZero: require('./formatters/remove-leading-zero')
 };
 
 window.formatScss = function(text) {
@@ -27,5 +28,6 @@ window.formatScss = function(text) {
         .format('trimLines')
         .format('removeEmptyAfterbraketLine')
         .format('addLineAfterBraket')
+        .format('removeLeadingZero')
         .toString();
 };
