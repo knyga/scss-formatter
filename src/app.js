@@ -11,7 +11,10 @@ OrderProvider.prototype.format = function(ruleName) {
 OrderProvider.prototype.formatters = {
     orderRules: require('./formatters/order-rules'),
     formatSelectorLines: require('./formatters/format-selector-lines'),
-    updateZeroVal: require('./formatters/update-zero-val')
+    updateZeroVal: require('./formatters/update-zero-val'),
+    removeEmptyAfterbraketLine: require('./formatters/remove-empty-afterbraket-line'),
+    trimLines: require('./formatters/trim-lines'),
+    addLineAfterBraket: require('./formatters/add-line-after-braket')
 };
 
 window.formatScss = function(text) {
@@ -21,5 +24,8 @@ window.formatScss = function(text) {
         .format('orderRules')
         .format('formatSelectorLines')
         .format('updateZeroVal')
+        .format('trimLines')
+        .format('removeEmptyAfterbraketLine')
+        .format('addLineAfterBraket')
         .toString();
 };
