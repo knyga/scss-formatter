@@ -11,7 +11,7 @@ OrderProvider.prototype.format = function(ruleName) {
 OrderProvider.prototype.formatters = {
     orderRules: require('./formatters/order-rules'),
     formatSelectorLines: require('./formatters/format-selector-lines'),
-    zeroPx: require('./formatters/zero_px')
+    updateZeroVal: require('./formatters/update-zero-val')
 };
 
 window.formatScss = function(text) {
@@ -20,6 +20,6 @@ window.formatScss = function(text) {
     return op
         .format('orderRules')
         .format('formatSelectorLines')
-        .format('zeroPx')
+        .format('updateZeroVal')
         .toString();
 };
