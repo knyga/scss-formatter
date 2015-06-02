@@ -16,7 +16,8 @@ OrderProvider.prototype.formatters = {
     trimLines: require('./formatters/trim-lines'),
     addLineAfterBraket: require('./formatters/add-line-after-braket'),
     removeLeadingZero: require('./formatters/remove-leading-zero'),
-    lowercase: require('./formatters/lowercase')
+    lowercase: require('./formatters/lowercase'),
+    addSpaceAfterPname: require('./formatters/add-space-after-pname')
 };
 
 window.formatScss = function(text) {
@@ -31,5 +32,6 @@ window.formatScss = function(text) {
         .format('removeEmptyAfterbraketLine')
         .format('addLineAfterBraket')
         .format('removeLeadingZero')
+        .format('addSpaceAfterPname')
         .toString();
 };
