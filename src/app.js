@@ -15,13 +15,15 @@ OrderProvider.prototype.formatters = {
     removeEmptyAfterbraketLine: require('./formatters/remove-empty-afterbraket-line'),
     trimLines: require('./formatters/trim-lines'),
     addLineAfterBraket: require('./formatters/add-line-after-braket'),
-    removeLeadingZero: require('./formatters/remove-leading-zero')
+    removeLeadingZero: require('./formatters/remove-leading-zero'),
+    lowercase: require('./formatters/lowercase')
 };
 
 window.formatScss = function(text) {
     var op = new OrderProvider(text);
 
     return op
+        .format('lowercase')
         .format('orderRules')
         .format('formatSelectorLines')
         .format('updateZeroVal')
